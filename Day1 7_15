@@ -1,0 +1,138 @@
+7. include<stdio.h>
+int main()
+{
+int n,sum=0,m;
+printf("enter a number:");
+scanf("%d",&n);
+if(n>0)
+{
+while(n>0)
+{
+m=n%10;
+sum=sum+m;
+n=n/10;
+}
+printf("sum=%d",sum);
+}
+else
+{
+printf("invalid input")
+}
+}
+
+8. #include <stdio.h>
+int addNumbers(int n);
+int main() {
+int num;
+printf("Enter a positive integer: ");
+scanf("%d", &num);
+printf("Sum = %d", addNumbers(num));
+return 0;
+}
+int addNumbers(int n) {
+if (n != 0)
+return n + addNumbers(n - 1);
+else
+return n;
+}
+
+9. #include <stdio.h>
+int main() {
+int num;
+printf("Enter an integer: ");
+scanf("%d", &num);
+if (num % 2 == 0) {
+printf("%d is even.\n", num);
+}
+else {
+printf("%d is odd.\n", num);
+}
+return 0;
+}
+
+10. #include <stdio.h>
+int main() {
+int m, n, temp;
+printf("Enter two integers: ");
+scanf("%d %d", &m, &n);
+printf("Before swapping: m = %d, n = %d\n", m, n);
+// swap the values of m and n
+temp = m;
+m = n;
+n = temp;
+printf("After swapping: m = %d, n = %d\n", m, n);
+return 0;
+}
+
+11. #include <stdio.h>
+int main() {
+int start, end, count = 0;
+printf("Enter the start and end of the range: ");
+scanf("%d %d", &start, &end);
+for (int i = start; i <= end; i++) {
+if (i % 5 == 0) {
+count++;
+}
+}
+printf("The number of integers divisible by 5 in the range %d to %d is %d\n", start, end,
+count);
+return 0;
+}
+
+12.#include <stdio.h>
+int main() {
+int num;
+printf("Enter a number: ");
+scanf("%d", &num);
+printf("Multiplication table of %d:\n", num);
+for (int i = 1; i <= 10; i++) {
+printf("%d x %d = %d\n", num, i, num * i);
+}
+return 0;
+}
+
+13. #include <stdio.h>
+int main() {
+int year;
+printf("Enter a year: ");
+scanf("%d", &year);
+if ((year % 4 == 0 && year % 100 != 0) || (year % 400 == 0)) {
+printf("%d is a leap year\n", year);
+} else {
+printf("%d is not a leap year\n", year);
+}
+return 0;
+}
+
+14. #include<stdio.h>
+int main()
+{
+int n1=0,n2=1,n3,i,number;
+printf("Enter the number of elements:");
+scanf("%d",&number);
+printf("%d %d",n1,n2);
+for(i=2;i<number;++i)
+{
+n3=n1+n2;
+printf(" %d",n3);
+n1=n2;
+n2=n3;
+}
+return 0;
+}
+Fibonacci s
+
+15.#include <stdio.h>
+int main() {
+int n, i, t1 = 0, t2 = 1, nextTerm;
+printf("Enter the number of terms: ");
+scanf("%d", &n);
+printf("Fibonacci Series: ");
+for (i = 1; i <= n; i++) {
+printf("%d, ", t1);
+nextTerm = t1 + t2;
+t1 = t2;
+t2 = nextTerm;
+}
+return 0;
+}
